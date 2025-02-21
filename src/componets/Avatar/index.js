@@ -14,7 +14,10 @@ function Avatar({ src, size = '48px', status, statusIconSize = '8px', ...rest })
 };
 
 Avatar.propTypes = {
-  // chidren: PropTypes.any
+  src: PropTypes.string.isRequired,
+  size: PropTypes.string,
+  status: PropTypes.oneOfType(['online', 'offline']),
+  statusIconSize: PropTypes.string,
 };
 
 export default Avatar;
