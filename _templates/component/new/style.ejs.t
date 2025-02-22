@@ -1,5 +1,5 @@
 ---
-to: src/componets/<%= name %>/style.js
+to: src/components/<%= name %>/style.js
 ---
 
 import styled from "styled-components";
