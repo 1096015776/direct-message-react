@@ -6,16 +6,16 @@ import React from 'react';
 import { Styled<%= name %> } from './style';
 import PropTypes from 'prop-types';
 
-function <%= name %>({ chidren, ...rest }) {
+function <%= name %>({ children, ...rest }) {
   return (
     <Styled<%= name %> {...rest}>
-      {chidren}
+      {children}
     </Styled<%= name %>>
   );
 };
 
 <%= name %>.propTypes = {
-  chidren: PropTypes.any
+  children: PropTypes.any
 };
 
 export default <%= name %>;
