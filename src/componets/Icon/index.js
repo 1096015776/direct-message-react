@@ -11,7 +11,11 @@ function Icon({ icon: IconComponet, width, height, color, opacity, ...rest }) {
 };
 
 Icon.propTypes = {
-  // chidren: PropTypes.any
+  icon: PropTypes.element.isRequired,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  color: PropTypes.string,
+  opacity: PropTypes.number
 };
 
 export default Icon;
