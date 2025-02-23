@@ -1,14 +1,6 @@
 import styled from "styled-components";
-import { css } from 'styled-components'
-import { circle } from "@/utils/mixin"
+import { circle, circleVirtual } from "@/utils/mixin"
 
-// 伪元素圆形
-const circleVirtual = (color, size) => css`
-position:absolute;
-display:block;
-content:"";
-${circle(color, size)}
-`
 
 //头像容器
 export const StyledAvatar = styled.div`
