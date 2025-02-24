@@ -1,4 +1,4 @@
-@import url('./story.css');
+@import url('../src/index.css');
 
 .row-elements {
   display: flex;
