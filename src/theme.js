@@ -1,4 +1,4 @@
-export default theme = {
+export default {
   primaryColor: "#4F9DDE",
   //在线状态
   green: "#34D859",
