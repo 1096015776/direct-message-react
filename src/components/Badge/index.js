@@ -11,7 +11,10 @@ function Badge({ children, show = false, count = 0, showZero = false, ...rest })
 };
 
 Badge.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
+  show: PropTypes.bool,
+  count: PropTypes.number,
+  showZero: PropTypes.bool
 };
 
 export default Badge;
