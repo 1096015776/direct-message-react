@@ -1,7 +1,7 @@
 import React from "react";
 import Paragraph from '.';
 export default {
-  title: "Paragraph",
+  title: "排版/Paragraph",
   componet: Paragraph
 };
 export const Default = () => (

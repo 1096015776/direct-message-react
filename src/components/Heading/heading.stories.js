@@ -1,7 +1,7 @@
 import React from "react";
 import Heading from '.';
 export default {
-  title: "Heading",
+  title: "排版/Heading",
   componet: Heading
 };
 export const Default = () => (

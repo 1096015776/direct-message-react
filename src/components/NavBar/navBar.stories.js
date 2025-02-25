@@ -8,7 +8,7 @@ const StyledContainer = styled.div`
 `
 
 export default {
-  title: "NavBar",
+  title: "页面组件/NavBar",
   componet: NavBar
 };
 export const Default = () => <NavBar></ NavBar>;

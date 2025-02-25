@@ -1,7 +1,7 @@
 import React from "react";
 import Text from '.';
 export default {
-  title: "Text",
+  title: "排版/Text",
   componet: Text
 };
 export const Default = () => (
