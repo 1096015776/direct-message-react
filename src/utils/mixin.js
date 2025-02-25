@@ -14,6 +14,7 @@ content:"";
 ${circle(color, size)}
 `
 
+// 高亮阴影
 export const activeBar = ({ barWidth = "8px", shadowWidth = "20px" } = {}) => css`
 position:relative;
 &::before,&::after{
@@ -40,4 +41,10 @@ position:relative;
   );
   opacity: 0.6;
 }
+`
+
+export const Card = (radius = "6px", padding = "20px 30px") => css`
+padding:${padding};
+border-radius:${radius};
+background-color:${({ theme }) => theme.background}
 `
