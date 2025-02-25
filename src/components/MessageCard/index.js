@@ -36,6 +36,15 @@ function MessageCard({
 };
 
 MessageCard.propTypes = {
+  avatarSrc: PropTypes.string,
+  avatarStatus: PropTypes.oneOf(['online', 'offline']),
+  statusText: PropTypes.string,
+  name: PropTypes.string,
+  time: PropTypes.string,
+  message: PropTypes.string,
+  unreadCount: PropTypes.number,
+  active: PropTypes.bool,
+  replied: PropTypes.bool,
   children: PropTypes.any
 };
 
