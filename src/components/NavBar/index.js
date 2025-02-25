@@ -5,12 +5,11 @@ import Badge from '@/components/Badge';
 import Avatar from '../Avatar';
 import profileImage from "../../assets/images/face-female-1.jpg";
 import { faCog, faCommentDots, faEllipsisH, faFolder, faStickyNote, faUser } from '@fortawesome/free-solid-svg-icons';
-import { css } from 'styled-components';
 
 function MenuItem({ icon, active, showBadge, ...rest }) {
   return (
     <StyledMenuItem active={active} {...rest}>
-      <a href="#">
+      <a href="#id">
         <Badge show={showBadge}>
           <MenuIcon active={active} icon={icon}></MenuIcon>
         </Badge>
