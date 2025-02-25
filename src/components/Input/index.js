@@ -5,7 +5,11 @@ import { useTheme } from 'styled-components';
 import Icon from '../Icon';
 import { ReactComponent as SearcIcon } from "../../assets/icons/search.svg"
 
-function Input({ placeholder = "请输入内容", prefix, suffix, ...rest }) {
+function Input({
+  placeholder = "请输入内容",
+  prefix,
+  suffix,
+  ...rest }) {
   return (
     <InputContainer {...rest}>
       {prefix && <Prefix>{prefix}</Prefix>}
@@ -26,6 +30,9 @@ function Search({ placeholder = '请输入搜索内容', ...rest }) {
 }
 
 Input.propTypes = {
+  placeholder: PropTypes.string,
+  prefix: PropTypes.any,
+  suffix: PropTypes.any
 };
 Input.Search = Search
 

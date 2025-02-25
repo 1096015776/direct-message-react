@@ -17,6 +17,10 @@ function Button({
 };
 
 Button.propTypes = {
+  type: PropTypes.string,
+  size: PropTypes.string,
+  shape: PropTypes.oneOf(['circle', 'rect']),
+  bgColor: PropTypes.string,
   children: PropTypes.any
 };
 
