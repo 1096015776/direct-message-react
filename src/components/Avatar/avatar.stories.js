@@ -2,7 +2,7 @@ import React from "react";
 import face from "../../assets/images/face-female-1.jpg"
 import Avatar from '.';
 export default {
-  title: "UI组件/Avatar",
+  title: "UI 组件/Avatar",
   componet: Avatar
 };
 export const Default = () => {
