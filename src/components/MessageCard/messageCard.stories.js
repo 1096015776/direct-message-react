@@ -2,7 +2,7 @@ import React from "react";
 import MessageCard from '.';
 import faceIcon from '@/assets/images/face-male-1.jpg'
 export default {
-  title: "MessageCard",
+  title: "UI 组件/MessageCard",
   componet: MessageCard
 };
 export const Default = () => (

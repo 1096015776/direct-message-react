@@ -6,7 +6,7 @@ import Icon from "../Icon";
 import { ReactComponent as plusIcon } from "@/assets/icons/plus.svg";
 import Select from "../Select";
 export default {
-  title: "Filter",
+  title: "UI 组件/Filter",
   componet: Filter
 };
 export const Default = () => (<>
