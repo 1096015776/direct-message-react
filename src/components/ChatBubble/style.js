@@ -25,7 +25,7 @@ z-index: 10;
 `
 
 const typeVariant = {
-  mime: css`
+  mine: css`
   ${Bubble}{
     background-color:${({ theme }) => theme.primaryColor}
   }
@@ -37,7 +37,6 @@ const typeVariant = {
       fill:${({ theme }) => theme.primaryColor}
     }
   }
-  
   `,
 }
 
