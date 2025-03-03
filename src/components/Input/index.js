@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledInput, InputContainer, Prefix, Stuffix } from './style';
+import { StyledInput, InputContainer, Prefix, Suffix } from './style';
 import PropTypes from 'prop-types';
 import { useTheme } from 'styled-components';
 import Icon from '../Icon';
@@ -15,7 +15,7 @@ function Input({
       {prefix && <Prefix>{prefix}</Prefix>}
       <StyledInput placeholder={placeholder}>
       </StyledInput>
-      {suffix && <Stuffix>stuffix</Stuffix>}
+      {suffix && <Suffix>{suffix}</Suffix>}
     </InputContainer>
   );
 };

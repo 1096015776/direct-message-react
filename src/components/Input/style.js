@@ -23,7 +23,7 @@ padding:0 30px;
 export const Prefix = styled.div`
 margin-right:16px;
 `
-export const Stuffix = styled.div`
+export const Suffix = styled.div`
 margin-left:16px;
 `
 
