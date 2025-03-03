@@ -21,7 +21,7 @@ border-left-color:transparent;
 border-right-color:transparent;
 border-bottom-color:transparent;
 position:absolute;
-bottom:100%;
+bottom:calc(100% + 1px);
 left:calc(50% - 6px);
 ${({ offset }) => offset && `transform:translate(${offset.x || 0},${offset.y || 0})`};
 display:${({ visible }) => visible ? 'block' : 'none'};
