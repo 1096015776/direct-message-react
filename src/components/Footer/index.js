@@ -17,7 +17,7 @@ function Footer({ children, ...rest }) {
   const theme = useTheme();
   return (
     <StyledFooter {...rest}>
-      <Input prefix={<Icon icon={clipIcon} width={24} height={24}></Icon>} suffix={(
+      <Input placeholder={"输入想和对方说的话"} prefix={<Icon icon={clipIcon} width={24} height={24}></Icon>} suffix={(
         <IconContainer>
           <Popover content={<PopoverContent></PopoverContent>}>
             <Icon icon={smileIcon} width={24} height={24} color={theme.gray3}></Icon>

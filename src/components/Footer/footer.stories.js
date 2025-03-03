@@ -5,9 +5,5 @@ export default {
   componet: Footer
 };
 export const Default = () => (<div style={{
-  height: "40vh",
-  width: "100vw",
-  display: "flex",
-  alignItems: "center",
-  justifyItems: "center",
+  marginTop: "80px"
 }}><Footer></ Footer></div>);
