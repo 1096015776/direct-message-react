@@ -19,7 +19,7 @@ function Footer({ children, ...rest }) {
     <StyledFooter {...rest}>
       <Input placeholder={"输入想和对方说的话"} prefix={<Icon icon={clipIcon} width={24} height={24}></Icon>} suffix={(
         <IconContainer>
-          <Popover content={<PopoverContent></PopoverContent>}>
+          <Popover content={<PopoverContent></PopoverContent>} offset={{ x: "-25%" }}>
             <Icon icon={smileIcon} width={24} height={24} color={theme.gray3}></Icon>
           </Popover>
           <Icon icon={microPhoneIcon} width={24} height={24}></Icon>
@@ -28,9 +28,10 @@ function Footer({ children, ...rest }) {
           </Button>
         </IconContainer>
 
-      )}></Input>
+      )
+      }></Input >
       {children}
-    </StyledFooter>
+    </StyledFooter >
   );
 };
 

@@ -10,6 +10,7 @@ border-radius:21px;
 padding: 12px 30px;
 box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.12);
 position:absolute;
+z-index:20;
 bottom: calc(100% + 12px);
 ${({ offset }) => offset && `transform:translate(${offset.x || 0},${offset.y || 0})`};
 display:${({ visible }) => visible ? 'block' : 'none'};
