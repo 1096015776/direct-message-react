@@ -1,16 +1,22 @@
 import React from 'react';
-import { StyledSelect } from './style';
+import { StyledLabel, StyledSelect } from './style';
 import PropTypes from 'prop-types';
+import Text from '../Text';
 
-function Select({ children, ...rest }) {
+function Select({ label, type, children, ...rest }) {
   return (
-    <StyledSelect {...rest}>
-      {children}
-    </StyledSelect>
-  );
+    <>
+      {label && <StyledLabel><Text>{label}:</Text></StyledLabel>}
+      <StyledSelect type={type} {...rest}>
+        {children}
+      </StyledSelect>
+    </>
+
+  )
 };
 
 Select.propTypes = {
+  type: PropTypes.oneOf(['form']),
   children: PropTypes.any
 };
 
