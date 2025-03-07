@@ -4,9 +4,7 @@ display:flex;
 flex-direction:column;
 `;
 export const StyledLabel = styled.label`
-font-size:${({ theme }) => theme.normal};
 margin-bottom:8px;
-color:${({ theme }) => theme.grayDark}
 `;
 
 export const InputUnderline = styled.input`
