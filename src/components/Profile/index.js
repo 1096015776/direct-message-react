@@ -12,19 +12,20 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import SocialIcon from '../Icon/SocialIcon';
-import { useTheme } from 'styled-components';
 import Seperator from '../Seperator';
 import Text from '../Text';
 import photo1 from "@/assets/images/photo1.jpg";
 import photo2 from "@/assets/images/photo2.jpg";
 import photo3 from "@/assets/images/photo3.jpg";
+import Button from '../Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
 
 
-function Profile({ children, ...rest }) {
-  const theme = useTheme();
+function Profile({ children, showCloseIcon = true, showEditBtn = false, ...rest }) {
   return (
     <StyledProfile {...rest}>
-      <CloseIcon icon={closeIcon} width={24} height={24} ></CloseIcon>
+      {showCloseIcon && <CloseIcon icon={closeIcon} width={24} height={24} ></CloseIcon>}
       <Avatar
         style={{
           margin: "26px 0",
@@ -33,6 +34,20 @@ function Profile({ children, ...rest }) {
         src={face}
         size='160px'
         statusIconSize='25px'></Avatar>
+      {showEditBtn &&
+        <Button size='52px' style={{
+          gridArea: "1 / 1 / 3 / 2",
+          alignSelf: "end",
+          marginLeft: "100px"
+        }}>
+          <FontAwesomeIcon
+            style={{
+              fontSize: "24px",
+            }}
+            icon={faPen}
+          />
+        </Button>
+      }
       <Paragraph
         size="xlarge"
         style={{

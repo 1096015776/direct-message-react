@@ -13,7 +13,7 @@ position:absolute;
 top:4px;
 left:2px;
 &::before{
-  ${circleVirtual("white", "8px")};
+  ${({ size }) => circleVirtual("white", size)} ;
   transform:scale(2);
 }
 &::after{

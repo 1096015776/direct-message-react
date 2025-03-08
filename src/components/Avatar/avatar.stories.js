@@ -8,7 +8,12 @@ export default {
 export const Default = () => {
   return (
     <div className="row-elements">
-      <Avatar src={face} size="48px" />
+      <Avatar
+        src={face}
+        size="48px"
+        status={"online"}
+        statusIconSize={"24px"}
+      />
       <Avatar src={face} size="56px" />
       <Avatar src={face} size="64px" />
       <Avatar src={face} size="72px" />
