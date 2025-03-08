@@ -1,7 +1,7 @@
 import React from "react";
 import Radio from '.';
 export default {
-  title: "Radio",
+  title: "UI 组件/Input/Radio",
   componet: Radio
 };
 export const Default = () => <Radio>选项1</ Radio>;
