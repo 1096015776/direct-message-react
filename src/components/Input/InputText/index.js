@@ -3,11 +3,11 @@ import { InputUnderline, StyledInputText, StyledLabel } from './style';
 import PropTypes from 'prop-types';
 import Text from '@/components/Text';
 
-function InputText({ label, ...rest }) {
+function InputText({ placeholder = '请输入内容', label, ...rest }) {
   return (
     <StyledInputText {...rest}>
       {label && <StyledLabel><Text>{label}:</Text></StyledLabel>}
-      <InputUnderline></InputUnderline>
+      <InputUnderline placeholder={placeholder}></InputUnderline>
     </StyledInputText>
   );
 };
