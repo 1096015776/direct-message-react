@@ -4,4 +4,4 @@ export default {
   title: "页面组件/Profile",
   componet: Profile
 };
-export const Default = () => <Profile></ Profile>;
+export const Default = () => <Profile status={"online"}></ Profile>;

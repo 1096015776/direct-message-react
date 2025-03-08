@@ -22,7 +22,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 
 
-function Profile({ children, showCloseIcon = true, showEditBtn = false, ...rest }) {
+function Profile({ children, showCloseIcon = true, showEditBtn = false, status, onEdit, ...rest }) {
   return (
     <StyledProfile {...rest}>
       {showCloseIcon && <CloseIcon icon={closeIcon} width={24} height={24} ></CloseIcon>}
@@ -32,6 +32,7 @@ function Profile({ children, showCloseIcon = true, showEditBtn = false, ...rest 
           gridArea: "1 / 1 / 3 / 2",
         }}
         src={face}
+        status={status}
         size='160px'
         statusIconSize='25px'></Avatar>
       {showEditBtn &&
@@ -39,7 +40,9 @@ function Profile({ children, showCloseIcon = true, showEditBtn = false, ...rest 
           gridArea: "1 / 1 / 3 / 2",
           alignSelf: "end",
           marginLeft: "100px"
-        }}>
+        }}
+          onClick={onEdit}
+        >
           <FontAwesomeIcon
             style={{
               fontSize: "24px",
