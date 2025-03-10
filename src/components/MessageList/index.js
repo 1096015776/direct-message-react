@@ -9,13 +9,17 @@ import Icon from '../Icon';
 import { ReactComponent as plusIcon } from '@/assets/icons/plus.svg';
 import MessageCard from '../MessageCard';
 import faceIcon from '@/assets/images/face-male-2.jpg'
+import FilterList from '../FilterList';
 
 function MessageList({ children, ...rest }) {
   return (
     <StyledMessageList {...rest}>
-      <Input.Search></Input.Search>
-      <ChatFilter></ChatFilter>
-      <ChatList></ChatList>
+      <FilterList
+        options={['最新消息优先', '在线好友优先']}
+        actionLabel={'创建会话'}
+      >
+        <ChatList></ChatList>
+      </FilterList>
       {children}
     </StyledMessageList>
   );
