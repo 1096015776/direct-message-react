@@ -6,7 +6,7 @@ export const StyledNavBar = styled.nav`
 display:grid;
 grid-template-rows:1fr 4fr;
 width:100px;
-/* height:100vh; */
+height:100%;
 padding:30px 0;
 background-color:${({ theme }) => theme.darkPurple};
 ${StyledAvatar}{
