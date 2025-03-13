@@ -4,6 +4,8 @@ import { StyledText } from "../Text/style";
 export const StyledNoteList = styled.div`
 height:100vh;
 overflow-y:auto;
+height:100%;
+padding:30px;
 `;
 
 export const Notes = styled.div`

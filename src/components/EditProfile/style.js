@@ -17,6 +17,8 @@ padding:30px;
 grid-template-columns: 1fr;
 max-height: 100vh;
 overflow-y: auto;
+height:100%;
+padding:30px;
 row-gap: 20px;
 `;
 

@@ -5,6 +5,8 @@ import { StyledText } from "../Text/style";
 export const StyledFileList = styled.div`
 max-height:100vh;
 overflow-y:auto;
+height:100%;
+padding:30px;
 `;
 
 export const Files = styled.div`

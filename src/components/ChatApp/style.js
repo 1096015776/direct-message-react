@@ -15,10 +15,9 @@ export const AppNav = styled.nav`
 `;
 
 export const AppSide = styled.aside`
-overflow-y:auto;
 background: linear-gradient(119.19deg, rgb(255, 255, 255) 0%, rgb(248, 248, 248) 65.34%, rgb(255, 255, 255) 100%);
-padding:30px;
 width:448px;
+height:100vh;
 `;
 
 export const AppContent = styled.div`

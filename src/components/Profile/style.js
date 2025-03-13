@@ -8,6 +8,8 @@ justify-content:center;
 justify-items:center;
 position:relative;
 overflow-y:auto;
+height:100%;
+padding:30px;
 `;
 
 
