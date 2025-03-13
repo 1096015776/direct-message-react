@@ -6,11 +6,8 @@ display:grid;
 align-content: start;
 justify-content:center;
 justify-items:center;
-padding:30px;
-height:100vh;
-margin-top: 2vh;
-overflow-y: auto;
 position:relative;
+overflow-y:auto;
 `;
 
 

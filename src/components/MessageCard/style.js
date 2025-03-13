@@ -6,6 +6,7 @@ import { activeBar, Card } from "@/utils/mixin";
 import Paragraph from "../Paragraph";
 export const StyledMessageCard = styled.div`
 ${Card()};
+box-shadow: rgba(0, 0, 0, 0.04) 0px 18px 40px 0px;
 display:grid;
 grid-template-areas:
 "avatar name time"

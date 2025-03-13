@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { StyledText } from "../Text/style";
 
 export const StyledNoteList = styled.div`
-padding:30px;
 height:100vh;
 overflow-y:auto;
 `;

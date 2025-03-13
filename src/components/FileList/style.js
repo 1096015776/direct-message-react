@@ -3,7 +3,6 @@ import { StyledIcon } from "../Icon/style";
 import { StyledText } from "../Text/style";
 
 export const StyledFileList = styled.div`
-padding:30px;
 max-height:100vh;
 overflow-y:auto;
 `;
