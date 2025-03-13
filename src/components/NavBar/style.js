@@ -23,6 +23,17 @@ export const StyledMenuItem = styled.div`
   justify-content:center;
   ${activeBar()};
   ${({ active }) => (active ? "" : "&::before,&::after{height:0}")};
+  &:hover{
+    &::before,&::after{
+      height:100%;
+    }
+    svg {
+      transform: scale(1.2);
+      opacity: 1;
+      transition:all .3s;
+    }
+
+  }
 }
 &:nth-last-child(1){
   align-self:end;

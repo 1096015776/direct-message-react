@@ -5,7 +5,7 @@ import Badge from '@/components/Badge';
 import Avatar from '../Avatar';
 import profileImage from "../../assets/images/face-female-1.jpg";
 import { faCog, faCommentDots, faEllipsisH, faFolder, faStickyNote, faUser } from '@fortawesome/free-solid-svg-icons';
-import { Link, matchPath, useLocation } from 'react-router-dom';
+import { Link, matchPath, useLocation, useNavigate } from 'react-router-dom';
 
 function MenuItem({ to = "#", icon, showBadge, ...rest }) {
   const loc = useLocation();
@@ -27,7 +27,9 @@ function MenuItem({ to = "#", icon, showBadge, ...rest }) {
     </StyledMenuItem>
   )
 }
+
 function NavBar({ children, ...rest }) {
+  const navigate = useNavigate();
   return (
     <StyledNavBar {...rest}>
       <Avatar src={profileImage} status={"online"}></Avatar>
@@ -36,7 +38,7 @@ function NavBar({ children, ...rest }) {
         <MenuItem to="/contacts" icon={faUser}></MenuItem>
         <MenuItem to="/files" icon={faFolder}></MenuItem>
         <MenuItem to="/notes" icon={faStickyNote}></MenuItem>
-        <MenuItem icon={faEllipsisH}></MenuItem>
+        <MenuItem onClick={() => { navigate(0) }} icon={faEllipsisH}></MenuItem>
         <MenuItem to="/settings" icon={faCog}></MenuItem>
       </MenuItems>
       {children}
