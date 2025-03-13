@@ -10,6 +10,8 @@ import { ReactComponent as plusIcon } from '@/assets/icons/plus.svg';
 import MessageCard from '../MessageCard';
 import faceIcon from '@/assets/images/face-male-2.jpg'
 import FilterList from '../FilterList';
+import useStaggeredList from '@/hooks/useStaggeredList';
+import { animated } from 'react-spring';
 
 function MessageList({ children, ...rest }) {
   return (
@@ -42,11 +44,12 @@ function ChatFilter({ ...rest }) {
 }
 
 function ChatList({ ...rest }) {
+  const trailAnimes = useStaggeredList(6);
+
   return (
-    <>{[1, 2, 3, 4, 5, 6].map((item, index) => (<div>
+    trailAnimes.map((style, index) => (<animated.div style={style}>
       <MessageCard
         style={{ marginBottom: "16px" }}
-        key={index}
         active={index === 3}
         avatarSrc={faceIcon}
         statusText={"在线"}
@@ -56,8 +59,7 @@ function ChatList({ ...rest }) {
         unreadCount={8}
         message="今天玩得很开心，明天去动物园吧"
       ></MessageCard>
-
-    </div>))}</>
+    </animated.div>))
 
   )
 }
