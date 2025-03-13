@@ -1,5 +1,7 @@
 import styled from "styled-components";
-export const StyledFooter = styled.div`
+import { animated } from 'react-spring';
+
+export const StyledFooter = styled(animated.div)`
 width:100%;
 padding:12px 30px;
 `;
