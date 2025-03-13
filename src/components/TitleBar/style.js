@@ -6,7 +6,8 @@ display:grid;
 grid-template-columns: 62px 1fr 112px;
 padding:30px;
 max-height:110px;
-border-bottom:1px solid ${({ theme }) => theme.gray4}
+border-bottom:1px solid ${({ theme }) => theme.gray4};
+z-index: 100;
 `;
 export const Title = styled.div``;
 export const Actions = styled.div`

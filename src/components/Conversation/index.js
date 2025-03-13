@@ -7,7 +7,7 @@ import Footer from '../Footer';
 import VoiceMessage from '../VoiceMessage';
 import { useSpring } from 'react-spring';
 
-function Conversation({ onAvatarClick, children, ...rest }) {
+function Conversation({ onVideoClicked, onAvatarClick, children, ...rest }) {
   const tBarAnimeProps = useSpring({
     opacity: 1,
     transform: "translate3d(0px, 0px, 0px)",
@@ -31,7 +31,7 @@ function Conversation({ onAvatarClick, children, ...rest }) {
 
   return (
     <StyledConversation {...rest}>
-      <TitleBar onAvatarClick={onAvatarClick} style={tBarAnimeProps}></TitleBar>
+      <TitleBar onAvatarClick={onAvatarClick} style={tBarAnimeProps} onVideoClicked={onVideoClicked}></TitleBar>
       <Conversations style={convsAnimeProps}>
         <ChatBubble time={'昨天 下午14：26'}>Hi 小宇，忙什么呢？</ChatBubble>
         <MyChatBubble time={'昨天 下午16：30'}>Hello 啊！最近就是一直在加班改 bug，然后 怼产品，怼 UI，各种怼！</MyChatBubble>

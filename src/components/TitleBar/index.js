@@ -13,7 +13,7 @@ import { DropDownItem } from '../DropDown/style';
 import DropDown from '../DropDown';
 import Seperator from '../Seperator';
 
-function TitleBar({ onAvatarClick, children, ...rest }) {
+function TitleBar({ onVideoClicked, onAvatarClick, children, ...rest }) {
   return (
     <StyledTitleBar {...rest}>
       <Avatar onClick={onAvatarClick} src={faceIcon} status={"offline"} style={{ cursor: "pointer" }}></Avatar>
@@ -27,7 +27,7 @@ function TitleBar({ onAvatarClick, children, ...rest }) {
         </Paragraph>
       </Title>
       <Actions>
-        <Icon width={24} height={24} opacity={0.3} icon={callIcon}></Icon>
+        <Icon width={24} height={24} opacity={0.3} icon={callIcon} onClick={onVideoClicked}></Icon>
         <Icon width={24} height={24} opacity={0.3} icon={cameraIcon}></Icon>
         <DropDown conent={
           <>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Actions, StyledVideoCall, Minimize, Action, Self, StyledFloatVideo } from './style';
 import PropTypes from 'prop-types';
-import videoCaller from "assets/images/video-caller.jpg";
+import videoCaller from "@/assets/images/video-caller.jpg";
 import {
   faCompressAlt,
   faMicrophone,
@@ -15,15 +15,15 @@ import faceIcon from "@/assets/images/face-female-1.jpg";
 import Text from '../Text';
 
 
-function VideoCall({ children, ...rest }) {
+function VideoCall({ onHangoff, children, ...rest }) {
   const [fullScreen, setFullScreen] = useState(true);
   if (fullScreen) {
-    return (<FullVideo onMini={() => { setFullScreen(false) }}></FullVideo>);
+    return (<FullVideo onHangoff={onHangoff} onMini={() => { setFullScreen(false) }}></FullVideo>);
   }
   return (<FloatVideo onFull={() => { setFullScreen(true) }}></FloatVideo>);
 };
 
-function FullVideo({ onMini, children, ...rest }) {
+function FullVideo({ onHangoff, onMini, children, ...rest }) {
   return (
     <StyledVideoCall src={videoCaller} {...rest}>
       <Minimize onClick={onMini}>
@@ -33,7 +33,7 @@ function FullVideo({ onMini, children, ...rest }) {
         <Action>
           <FontAwesomeIcon icon={faMicrophone} color={'white'}></FontAwesomeIcon>
         </Action>
-        <Action type={"hangoff"}>
+        <Action type={"hangoff"} onClick={onHangoff}>
           <FontAwesomeIcon icon={faPhoneSlash} color={'white'}></FontAwesomeIcon>
         </Action>
         <Action>

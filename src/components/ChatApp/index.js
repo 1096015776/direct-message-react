@@ -12,9 +12,11 @@ import EditProfile from '../EditProfile';
 import Setting from '../Setting';
 import BlockedList from '../BlockedList';
 import Profile from '../Profile';
+import VideoCall from '../VideoCall';
 
 function ChatApp({ children, ...rest }) {
   const [showDrawer, setShowDrawer] = useState(false);
+  const [videoCalling, setVideoCalling] = useState(false);
   return (
     <StyledChatApp {...rest}>
       <AppNav>
@@ -30,8 +32,9 @@ function ChatApp({ children, ...rest }) {
         </Routes>
       </AppSide>
       <AppContent>
+        {videoCalling && (<VideoCall onHangoff={() => { setVideoCalling(false) }}></VideoCall>)}
         <Routes>
-          <Route path="/" element={<Conversation onAvatarClick={() => setShowDrawer(true)}></Conversation>}></Route>
+          <Route path="/" element={<Conversation onAvatarClick={() => setShowDrawer(true)} onVideoClicked={() => { setVideoCalling(true) }}></Conversation>}></Route>
           <Route path="/settings" element={<Setting></Setting>}></Route>
           <Route path="/settings/blocked" element={<BlockedList></BlockedList>}></Route>
         </Routes>

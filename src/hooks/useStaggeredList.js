@@ -11,8 +11,6 @@ export default function useStaggeredList(number) {
     },
     // delay: 200,
   });
-  console.log(trailAnimes)
-
   return trailAnimes;
 }
 

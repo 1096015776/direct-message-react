@@ -64,6 +64,7 @@ width:max-content;
 display:grid;
 column-gap:10px;
 row-gap:5px;
+z-index:100;
 grid-template-areas:
 "avatar title title"
 "avatar changeFull icon";
