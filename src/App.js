@@ -2,12 +2,15 @@ import './App.css';
 import theme from './theme.js'
 import { ThemeProvider } from 'styled-components'
 import ChatApp from './components/ChatApp';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <ChatApp></ChatApp>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <ChatApp></ChatApp>
+      </ThemeProvider>
+    </Router>
   );
 }
 

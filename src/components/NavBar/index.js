@@ -5,15 +5,25 @@ import Badge from '@/components/Badge';
 import Avatar from '../Avatar';
 import profileImage from "../../assets/images/face-female-1.jpg";
 import { faCog, faCommentDots, faEllipsisH, faFolder, faStickyNote, faUser } from '@fortawesome/free-solid-svg-icons';
+import { Link, matchPath, useLocation } from 'react-router-dom';
 
-function MenuItem({ icon, active, showBadge, ...rest }) {
+function MenuItem({ to = "#", icon, showBadge, ...rest }) {
+  const loc = useLocation();
+  const active = !!matchPath(
+    {
+      path: to,
+      end: true,
+    },
+    loc.pathname
+  );
+
   return (
     <StyledMenuItem active={active} {...rest}>
-      <a href="#id">
+      <Link to={to}>
         <Badge show={showBadge}>
           <MenuIcon active={active} icon={icon}></MenuIcon>
         </Badge>
-      </a>
+      </Link>
     </StyledMenuItem>
   )
 }
@@ -22,12 +32,12 @@ function NavBar({ children, ...rest }) {
     <StyledNavBar {...rest}>
       <Avatar src={profileImage} status={"online"}></Avatar>
       <MenuItems>
-        <MenuItem showBadge active icon={faCommentDots}></MenuItem>
-        <MenuItem icon={faUser}></MenuItem>
-        <MenuItem icon={faFolder}></MenuItem>
-        <MenuItem icon={faStickyNote}></MenuItem>
+        <MenuItem showBadge to="/" icon={faCommentDots}></MenuItem>
+        <MenuItem to="/contacts" icon={faUser}></MenuItem>
+        <MenuItem to="/files" icon={faFolder}></MenuItem>
+        <MenuItem to="/notes" icon={faStickyNote}></MenuItem>
         <MenuItem icon={faEllipsisH}></MenuItem>
-        <MenuItem icon={faCog}></MenuItem>
+        <MenuItem to="/settings" icon={faCog}></MenuItem>
       </MenuItems>
       {children}
     </StyledNavBar>
