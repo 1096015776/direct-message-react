@@ -5,7 +5,11 @@ import FilterList from '../FilterList';
 import contactData from "@/data/contact.js"
 import ContactCard from '../ContactCard';
 
+import useStaggeredList from '@/hooks/useStaggeredList';
+import { animated } from 'react-spring';
+
 function ContactList({ children, ...rest }) {
+  const trailAnimes = useStaggeredList(contactData.length);
   return (
     <StyledContactList {...rest}>
       <FilterList
@@ -15,10 +19,13 @@ function ContactList({ children, ...rest }) {
       ></FilterList>
       <StyledContact>
         {contactData.map((item, index) => {
-          return (<ContactCard
-            id={item.id}
-            contact={item}
-          ></ContactCard>)
+          return (
+            <animated.div style={trailAnimes[index]}>
+              <ContactCard
+                id={item.id}
+                contact={item}></ContactCard>
+            </animated.div>
+          )
         })}
       </StyledContact>
       {children}
