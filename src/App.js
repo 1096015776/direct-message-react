@@ -1,12 +1,12 @@
 import './App.css';
 import theme from './theme.js'
 import { ThemeProvider } from 'styled-components'
-import NavBar from './components/NavBar';
+import ChatApp from './components/ChatApp';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <NavBar></NavBar>
+      <ChatApp></ChatApp>
     </ThemeProvider>
   );
 }
