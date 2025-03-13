@@ -22,10 +22,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 
 
-function Profile({ children, showCloseIcon = true, showEditBtn = false, status, onEdit, ...rest }) {
+function Profile({ onCloseClick, children, showCloseIcon = true, showEditBtn = false, status, onEdit, ...rest }) {
   return (
     <StyledProfile {...rest}>
-      {showCloseIcon && <CloseIcon icon={closeIcon} width={24} height={24} ></CloseIcon>}
+      {showCloseIcon && <CloseIcon onClick={onCloseClick} icon={closeIcon} width={24} height={24} ></CloseIcon>}
       <Avatar
         style={{
           margin: "26px 0",

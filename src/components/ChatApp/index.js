@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppContent, AppDrawer, AppNav, AppSide, StyledChatApp } from './style';
 import PropTypes from 'prop-types';
 import NavBar from '../NavBar';
@@ -11,8 +11,10 @@ import NoteList from '../NoteList';
 import EditProfile from '../EditProfile';
 import Setting from '../Setting';
 import BlockedList from '../BlockedList';
+import Profile from '../Profile';
 
 function ChatApp({ children, ...rest }) {
+  const [showDrawer, setShowDrawer] = useState(false);
   return (
     <StyledChatApp {...rest}>
       <AppNav>
@@ -29,13 +31,13 @@ function ChatApp({ children, ...rest }) {
       </AppSide>
       <AppContent>
         <Routes>
-          <Route path="/" element={<Conversation></Conversation>}></Route>
+          <Route path="/" element={<Conversation onAvatarClick={() => setShowDrawer(true)}></Conversation>}></Route>
           <Route path="/settings" element={<Setting></Setting>}></Route>
           <Route path="/settings/blocked" element={<BlockedList></BlockedList>}></Route>
         </Routes>
       </AppContent>
-      <AppDrawer>
-        {/* <Profile></Profile> */}
+      <AppDrawer show={showDrawer}>
+        <Profile onCloseClick={() => setShowDrawer(false)}></Profile>
       </AppDrawer>
       {children}
     </StyledChatApp>

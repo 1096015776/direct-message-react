@@ -25,5 +25,14 @@ export const AppContent = styled.div`
 flex-grow:1;
 `
 
-export const AppDrawer = styled.div``
+export const AppDrawer = styled.div`
+transform:translateX(100%);
+width:0;
+transition: transform 0.4s;
+${({ show }) => show && `
+padding:30px;
+width:initial;
+transform:translateX(0);
+`}
+`
 

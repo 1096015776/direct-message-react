@@ -10,10 +10,10 @@ import { ReactComponent as cameraIcon } from "@/assets/icons/camera.svg"
 import { ReactComponent as optionsIcon } from "@/assets/icons/options.svg"
 import Icon from '../Icon';
 
-function TitleBar({ children, ...rest }) {
+function TitleBar({ onAvatarClick, children, ...rest }) {
   return (
     <StyledTitleBar {...rest}>
-      <Avatar src={faceIcon} status={"offline"}></Avatar>
+      <Avatar onClick={onAvatarClick} src={faceIcon} status={"offline"} style={{ cursor: "pointer" }}></Avatar>
       <Title>
         <Paragraph size="large">
           慕容天宇
