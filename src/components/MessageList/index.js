@@ -1,13 +1,7 @@
 import React from 'react';
 import { StyledMessageList } from './style';
 import PropTypes from 'prop-types';
-import Filter from '../Filter';
-import Select from '../Select';
-import Button from '../Button';
-import Icon from '../Icon';
-import { ReactComponent as plusIcon } from '@/assets/icons/plus.svg';
 import MessageCard from '../MessageCard';
-import faceIcon from '@/assets/images/face-male-2.jpg'
 import FilterList from '../FilterList';
 import useStaggeredList from '@/hooks/useStaggeredList';
 import { animated } from 'react-spring';
