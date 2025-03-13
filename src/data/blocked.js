@@ -1,12 +1,12 @@
-import face1 from "assets/images/face-male-1.jpg";
-import face3 from "assets/images/face-male-2.jpg";
-import face5 from "assets/images/face-male-3.jpg";
-import face7 from "assets/images/face-male-4.jpg";
+import face1 from "@/assets/images/face-male-1.jpg";
+import face3 from "@/assets/images/face-male-2.jpg";
+import face5 from "@/assets/images/face-male-3.jpg";
+import face7 from "@/assets/images/face-male-4.jpg";
 
-import face2 from "assets/images/face-female-1.jpg";
-import face4 from "assets/images/face-female-2.jpg";
-import face6 from "assets/images/face-female-3.jpg";
-import face8 from "assets/images/face-female-4.jpg";
+import face2 from "@/assets/images/face-female-1.jpg";
+import face4 from "@/assets/images/face-female-2.jpg";
+import face6 from "@/assets/images/face-female-3.jpg";
+import face8 from "@/assets/images/face-female-4.jpg";
 
 export default [
   {

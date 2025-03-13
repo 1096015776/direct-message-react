@@ -1,10 +1,10 @@
-import note1 from "assets/images/note-1.jpg";
-import note2 from "assets/images/note-2.jpg";
-import note3 from "assets/images/note-3.jpg";
-import note4 from "assets/images/note-4.jpg";
-import note5 from "assets/images/note-5.jpg";
-import note6 from "assets/images/note-6.jpg";
-import note7 from "assets/images/note-7.jpg";
+import note1 from "@/assets/images/note-1.jpg";
+import note2 from "@/assets/images/note-2.jpg";
+import note3 from "@/assets/images/note-3.jpg";
+import note4 from "@/assets/images/note-4.jpg";
+import note5 from "@/assets/images/note-5.jpg";
+import note6 from "@/assets/images/note-6.jpg";
+import note7 from "@/assets/images/note-7.jpg";
 
 export default [
   {
