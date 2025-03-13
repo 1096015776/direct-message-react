@@ -6,6 +6,7 @@ import Text from '../Text';
 import { ReactComponent as rightIcon } from '@/assets/icons/arrowMenuRight.svg'
 import Icon from '../Icon';
 import Paragraph from '../Paragraph';
+import { Link } from 'react-router-dom';
 
 function Setting({ children, ...rest }) {
   return (
@@ -20,7 +21,11 @@ function Setting({ children, ...rest }) {
       <SettingItem label={'语音和视频通话提醒'} ></SettingItem>
       <SettingItem label={'显示通知详情'} ></SettingItem>
       <SettingItem label={'声音'} ></SettingItem>
-      <SettingItem label={'查看已静音的好友列表'} type={'menu'} ></SettingItem>
+      <Link to="/settings/blocked" style={{
+        textDecoration: "none", color: "inherit"
+      }}>
+        <SettingItem label={'查看已静音的好友列表'} type={'menu'} ></SettingItem>
+      </Link>
       {children}
     </StyledSetting>
   );

@@ -7,12 +7,14 @@ import Icon from '../Icon';
 import Text from '../Text';
 import blockedData from "@/data/blocked.js"
 import Avatar from '../Avatar';
+import { useNavigate } from 'react-router-dom';
 
-function BlockedList({ onBack, children, ...rest }) {
+function BlockedList({ children, ...rest }) {
+  const navigate = useNavigate()
   return (
     <StyledBlockedList {...rest}>
       <BlockHeader>
-        <Icon icon={leftIcon} width={24} height={24} onClick={onBack}></Icon>
+        <Icon icon={leftIcon} width={24} height={24} onClick={() => { navigate(-1) }}></Icon>
         <Text size='xxlarge'>已屏蔽的好友</Text>
       </BlockHeader>
       <BlockedUsers>
