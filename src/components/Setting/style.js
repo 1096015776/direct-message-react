@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { StyledText } from '@/components/Text/style.js';
+import { animated } from 'react-spring';
 
-export const StyledSetting = styled.div`
+export const StyledSetting = styled(animated.div)`
 padding:80px 72px;
 display:grid;
 grid-row-gap:26px;

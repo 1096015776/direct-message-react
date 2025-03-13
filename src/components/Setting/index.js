@@ -7,10 +7,17 @@ import { ReactComponent as rightIcon } from '@/assets/icons/arrowMenuRight.svg'
 import Icon from '../Icon';
 import Paragraph from '../Paragraph';
 import { Link } from 'react-router-dom';
+import { useSpring } from 'react-spring';
 
 function Setting({ children, ...rest }) {
+  const animateStyle = useSpring({
+    opacity: 1,
+    transform: "translate3d(0px, 0px, 0px)",
+    from: { opacity: 0, transform: "translate3d(50px, 0px, 0px)" },
+    delay: 300,
+  });
   return (
-    <StyledSetting {...rest}>
+    <StyledSetting style={animateStyle} {...rest}>
       <Paragraph size={"xxlarge"}>隐私设置</Paragraph>
       <SettingItem label={'添加好友时需要验证'} ></SettingItem>
       <SettingItem label={'推荐通讯录好友'} description={'上传的通讯录只用来匹配好友列表，本应用不会记录和发送任何信息给其它机构或'}></SettingItem>
