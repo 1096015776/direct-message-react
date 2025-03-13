@@ -28,7 +28,7 @@ function MessageCard({
       <Message replied={replied}>
         {replied && <Icon style={{ justifyContent: "start" }} icon={repliedIcon} width={16} height={14} color={active ? theme.inactiveColorDark : theme.inactiveColor} opacity={active ? 0.4 : 1}></Icon>}
         <MessageText ellipsis>{message}</MessageText>
-        <UnreadBadge count={unreadCount}></UnreadBadge>
+        <UnreadBadge count={unreadCount} showZero={false}></UnreadBadge>
       </Message>
       {children}
     </StyledMessageCard>
