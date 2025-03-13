@@ -12,6 +12,8 @@ import { ReactComponent as worldIcon } from '@/assets/icons/fileWord.svg';
 import { ReactComponent as optionsIcon } from '@/assets/icons/options.svg';
 import Icon from '../Icon';
 import Text from '../Text';
+import useStaggeredList from '@/hooks/useStaggeredList';
+import { animated } from 'react-spring';
 
 const fileImgMap = {
   "zip": zipIcon,
@@ -23,6 +25,7 @@ const fileImgMap = {
 }
 
 function FileList({ children, ...rest }) {
+  const trailAnimes = useStaggeredList(filesData.length);
   return (
     <StyledFileList {...rest}>
       <FilterList
@@ -30,14 +33,18 @@ function FileList({ children, ...rest }) {
         options={['最新文件优先', '按文件名排序']}
       ></FilterList>
       <Files>
-        {filesData.map((item) => {
-          return (<File id={item.id}>
-            <Icon icon={fileImgMap[item.type]} width={60} height={60}></Icon>
-            <Text size={'medium'} bold>{item.name}</Text>
-            <Text type={'secondary'}>{item.size}</Text>
-            <Icon icon={optionsIcon} width={24} height={24} color={'rgba(41, 47, 76,0.3)'}></Icon>
-            <Text type={'secondary'}>{item.updatedAt}</Text>
-          </File>)
+        {filesData.map((item, index) => {
+          return (
+            <animated.div style={trailAnimes[index]}>
+              <File id={item.id}>
+                <Icon icon={fileImgMap[item.type]} width={60} height={60}></Icon>
+                <Text size={'medium'} bold>{item.name}</Text>
+                <Text type={'secondary'}>{item.size}</Text>
+                <Icon icon={optionsIcon} width={24} height={24} color={'rgba(41, 47, 76,0.3)'}></Icon>
+                <Text type={'secondary'}>{item.updatedAt}</Text>
+              </File>
+            </animated.div>
+          )
         })}
       </Files>
       {children}
