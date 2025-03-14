@@ -2,6 +2,7 @@
   "name": "react-dirct-2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://archlinux.top/direct",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

@@ -55,7 +55,7 @@ const addImageWebpackLoader = (config) => {
 
 module.exports = override(
   useBabelRc(),
-  setPublicPath,
+  // setPublicPath,
   addWebpackAlias({
     '@': path.resolve(__dirname, 'src')
   }),
